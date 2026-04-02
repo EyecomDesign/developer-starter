@@ -1,7 +1,10 @@
-import { greetUser } from '$utils/greet';
+import { initBoldFullScreenNavigation } from './Navbar';
+import { initWelcomingWordsLoader } from './PageLoader';
+import { initPageTransition } from './PageTransition';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  const name = 'John Doe';
-  greetUser(name);
+  initPageTransition();
+  initWelcomingWordsLoader();
+  initBoldFullScreenNavigation();
 });
